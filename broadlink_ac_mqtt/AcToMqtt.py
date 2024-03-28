@@ -286,7 +286,7 @@ class AcToMqtt:
 	def connect_mqtt(self):
 	
 		##Setup client
-		self._mqtt = mqtt.Client(client_id=self.config["mqtt_client_id"], clean_session=True, userdata=None)
+		self._mqtt = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION1, client_id=self.config["mqtt_client_id"], clean_session=True, userdata=None)
 		
 		
 		##Set last will and testament
